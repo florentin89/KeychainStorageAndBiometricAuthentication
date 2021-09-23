@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VF4-yd-cNA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="BiometricAuthTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saH-k7-7HT">
+                                <rect key="frame" x="121" y="427" width="172" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="saH-k7-7HT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="69t-79-bll"/>
+                            <constraint firstItem="saH-k7-7HT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oc2-VV-OPd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4fe-A6-azQ"/>
+                    <connections>
+                        <segue destination="pGs-Js-Ana" kind="show" identifier="goLoginVC" id="cSc-LB-wXg"/>
+                        <segue destination="NWG-im-yVo" kind="show" identifier="goHomeVC" id="A5X-Jh-JZP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="94"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hed-rZ-kAW">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pGs-Js-Ana" customClass="LoginViewController" customModule="BiometricAuthTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vI6-wD-6MN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDo-2S-tCx">
+                                <rect key="frame" x="20" y="64" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Member PIN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-bS-Zu1">
+                                <rect key="frame" x="20" y="198" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwc-DY-fc5">
+                                <rect key="frame" x="107" y="282" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="OaN-6v-Mid"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtnTouched:" destination="pGs-Js-Ana" eventType="touchUpInside" id="qoq-mU-u9j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zY-VU-w1m">
+                                <rect key="frame" x="173.5" y="362" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="0If-mi-Rvg"/>
+                                    <constraint firstAttribute="height" constant="67" id="fcn-qm-rVe"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="TouchIcon"/>
+                                <connections>
+                                    <action selector="biometricLoginBtnTouched:" destination="pGs-Js-Ana" eventType="touchUpInside" id="6SI-Y2-vlN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Member Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-Qq-C0r">
+                                <rect key="frame" x="20" y="144" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QeM-E3-RjO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e2x-bS-Zu1" firstAttribute="leading" secondItem="QeM-E3-RjO" secondAttribute="leading" constant="20" id="25G-Pe-5jr"/>
+                            <constraint firstItem="Muy-Qq-C0r" firstAttribute="top" secondItem="rDo-2S-tCx" secondAttribute="bottom" constant="20" id="6lP-rh-ReR"/>
+                            <constraint firstItem="QeM-E3-RjO" firstAttribute="trailing" secondItem="Muy-Qq-C0r" secondAttribute="trailing" constant="20" id="GDS-8C-KQq"/>
+                            <constraint firstItem="QeM-E3-RjO" firstAttribute="trailing" secondItem="e2x-bS-Zu1" secondAttribute="trailing" constant="20" id="IDI-em-Jzc"/>
+                            <constraint firstItem="jwc-DY-fc5" firstAttribute="centerX" secondItem="vI6-wD-6MN" secondAttribute="centerX" id="KGK-6S-7TO"/>
+                            <constraint firstItem="3zY-VU-w1m" firstAttribute="centerX" secondItem="vI6-wD-6MN" secondAttribute="centerX" id="OXp-uR-kUW"/>
+                            <constraint firstItem="jwc-DY-fc5" firstAttribute="top" secondItem="e2x-bS-Zu1" secondAttribute="bottom" constant="50" id="Q1Q-v1-wVB"/>
+                            <constraint firstItem="rDo-2S-tCx" firstAttribute="top" secondItem="QeM-E3-RjO" secondAttribute="top" constant="20" id="UAQ-dG-ShD"/>
+                            <constraint firstItem="e2x-bS-Zu1" firstAttribute="top" secondItem="Muy-Qq-C0r" secondAttribute="bottom" constant="20" id="Wm9-Ng-CJD"/>
+                            <constraint firstItem="QeM-E3-RjO" firstAttribute="trailing" secondItem="rDo-2S-tCx" secondAttribute="trailing" constant="20" id="bkN-3Y-0vq"/>
+                            <constraint firstItem="Muy-Qq-C0r" firstAttribute="leading" secondItem="QeM-E3-RjO" secondAttribute="leading" constant="20" id="h8d-f0-Mry"/>
+                            <constraint firstItem="rDo-2S-tCx" firstAttribute="leading" secondItem="QeM-E3-RjO" secondAttribute="leading" constant="20" id="qxt-3x-La6"/>
+                            <constraint firstItem="3zY-VU-w1m" firstAttribute="top" secondItem="jwc-DY-fc5" secondAttribute="bottom" constant="50" id="zL5-Zh-uUY"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="biometricLoginBtnOutlet" destination="3zY-VU-w1m" id="jwB-Vy-piJ"/>
+                        <outlet property="memberCodeTextField" destination="Muy-Qq-C0r" id="Gwq-d1-2di"/>
+                        <outlet property="memberPinTextField" destination="e2x-bS-Zu1" id="ykb-bC-u7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQ1-aX-3aV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="-258"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="8px-4r-W9L">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NWG-im-yVo" customClass="HomeViewController" customModule="BiometricAuthTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVD-Lw-eJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME SCREEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="del-QJ-gIZ">
+                                <rect key="frame" x="104.5" y="430" width="205.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOX-vw-sjP">
+                                <rect key="frame" x="157" y="812" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="WKB-28-sT3"/>
+                                    <constraint firstAttribute="height" constant="50" id="iRi-Kx-UZU"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtnTouched:" destination="NWG-im-yVo" eventType="touchUpInside" id="6q7-9d-q7Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LQd-DF-Fxt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WOX-vw-sjP" firstAttribute="bottom" secondItem="LQd-DF-Fxt" secondAttribute="bottom" id="9ZZ-t1-eih"/>
+                            <constraint firstItem="del-QJ-gIZ" firstAttribute="centerY" secondItem="IVD-Lw-eJJ" secondAttribute="centerY" id="cfP-lP-hbx"/>
+                            <constraint firstItem="WOX-vw-sjP" firstAttribute="centerX" secondItem="IVD-Lw-eJJ" secondAttribute="centerX" id="nci-CV-oNT"/>
+                            <constraint firstItem="del-QJ-gIZ" firstAttribute="centerX" secondItem="IVD-Lw-eJJ" secondAttribute="centerX" id="oKT-RB-Ben"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29k-pj-47J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bI6-64-8Jd">
+            <objects>
+                <navigationController id="VF4-yd-cNA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1jZ-iP-kTD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FzH-0Y-4E2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fue-b2-EYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TouchIcon" width="138" height="137.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
